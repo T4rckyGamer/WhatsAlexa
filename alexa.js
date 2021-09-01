@@ -27,13 +27,13 @@ ${chalk.blue.italic('🔄 Loading QR CODE...')}`);
         if (!fs.existsSync('config.env')) {
             fs.writeFileSync('config.env', `ALEXA_SESSION="${st}"`);
         }
-            await conn.sendMessage(
+            conn.sendMessage(
               conn.user.jid,
                st
                , MessageType.text
             )
         
-            await conn.sendMessage(
+            conn.sendMessage(
               conn.user.jid,
              '*⚠ Do not share this code with Anyone! ⚠*\n\nThank You For using WhatsAlexa 💖'
             , MessageType.text
